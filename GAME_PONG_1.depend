@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1586442255 source:c:\users\admin\desktop\game_pong_1\main.cpp
+	<iostream>
+	<SDL.h>
+	<time.h>
+	"window.h"
+	<vector>
+	<cmath>
+	<SDL_image.h>
+	<SDL_mixer.h>
+
+1586353887 c:\users\admin\desktop\game_pong_1\window.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1586434518 source:c:\users\admin\desktop\game_pong_1\window.cpp
+	"window.h"
+	<SDL_image.h>
+
+1586442254 source:c:\users\admin\onedrive\desktop\game_pong_1\main.cpp
+	<iostream>
+	<SDL.h>
+	<time.h>
+	"window.h"
+	<vector>
+	<cmath>
+	<SDL_image.h>
+	<SDL_mixer.h>
+
+1586353886 c:\users\admin\onedrive\desktop\game_pong_1\window.h
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1586434518 source:c:\users\admin\onedrive\desktop\game_pong_1\window.cpp
+	"window.h"
+	<SDL_image.h>
+
