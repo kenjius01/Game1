@@ -48,16 +48,11 @@ void waitUntilKeyPressed()
         if ( SDL_WaitEvent(&e) != 0 &&
              (e.type == SDL_KEYDOWN || e.type == SDL_QUIT) )
             return;
-       // SDL_Delay(100);
+       
     }
 }
 
-/**
-* Nạp một ảnh bitmap (BMP) vào một texture trên thiết bị hiện thị (rendering device)
-* @param file: đường dẫn và tên file ảnh BMP
-* @param ren: renderer để nạp texture lên
-* @return trả về texture đã nạp, hoặc nullptr nếu có lỗi.
-*/
+
 SDL_Texture* loadTexture(const std::string &file, SDL_Renderer *ren)
 {
 	//Khởi tạo là nullptr để tránh lỗi 'dangling pointer'
@@ -95,14 +90,7 @@ SDL_Texture* loadTexturepng(const std::string &file, SDL_Renderer *ren)
 	}
 	return texture;
 }
-/**
-* Vẽ một SDL_Texture lên một SDL_Renderer tại toạ độ (x, y), trong khi
-* giữ nguyên chiều rộng và cao của ảnh
-* @param tex: texture nguồn chúng ta muốn vẽ ra
-* @param ren: thiết bị renderer chúng ta muốn vẽ vào
-* @param x: hoành độ
-* @param y: tung độ
-*/
+
 void renderTexture(SDL_Texture *tex, SDL_Renderer *ren, int w, int h)
 {
 	//Thiết lập hình chữ nhật đích mà chúng ta muốn vẽ ảnh vào trong
@@ -115,16 +103,8 @@ void renderTexture(SDL_Texture *tex, SDL_Renderer *ren, int w, int h)
 	SDL_RenderCopy(ren, tex, NULL, &dst);
 }
 
-/**
-* Vẽ một SDL_Texture lên một SDL_Renderer tại toạ độ (x, y), với
-* chiều rộng và cao mới
-* @param tex: texture nguồn chúng ta muốn vẽ ra
-* @param ren: thiết bị renderer chúng ta muốn vẽ vào
-* @param x: hoành độ
-* @param y: tung độ
-* @param w: chiều rộng (mới)
-* @param h: độ cao (mới)
-*/
+
+
 void renderTexture(SDL_Texture *tex, SDL_Renderer *ren, int x, int y, int w, int h)
 {
 	//Thiết lập hình chữ nhật đích mà chúng ta muốn vẽ ảnh vào trong
