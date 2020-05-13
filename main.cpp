@@ -9,7 +9,6 @@
 #include<SDL_mixer.h>
 using namespace std;
 
-//**************************************************************
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 700;
 Mix_Chunk* sound=nullptr;
@@ -35,11 +34,11 @@ int main(int argc, char* argv[])
     SDL_Window* window;
     SDL_Renderer* renderer;
     bool bong_run=true;
-    int so_hang=5,so_cot=10,h=20,w=50,i,j,x,y;
+    int so_hang=5,so_cot=10,i,j,x,y;
     int vi_tri_y[so_hang][so_cot], vi_tri_x[so_hang][so_cot], so_box=3, danhdau[so_hang][so_cot], mang_gach[so_hang][so_cot];
     int van1_x=200, van1_y=670, bong_step_x=3, bong_step_y=3, bong_x, bong_y, time_gach=0, so_gach_pha=0;
     srand((int) time(NULL));
-    bong_x=rand()%700+50;  bong_y=rand()%50+500;
+    bong_x=rand()%700+50;  bong_y=rand()%400+300;
     initSDL(window, renderer, SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_TITLE);
 
     SDL_Texture* gach[so_hang][so_cot];
@@ -73,7 +72,7 @@ int main(int argc, char* argv[])
    for(i=3;i<so_hang;i++){
       for(j=0;j<so_cot;j++){
           gach[i][j]=loadTexturepng("gach.png",renderer);
-          mang_gach[i][j]=2;
+          mang_gach[i][j]=1;
       }
    }
    vi_tri_x[0][0]=3; vi_tri_y[0][0]=2;
